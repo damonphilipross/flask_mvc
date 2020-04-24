@@ -1,10 +1,8 @@
-<html>
+{% extends "base.html" %}
 
-<body>
-  <form method="POST" action="/">
-    <input type="text" name="title">
-    <input type="submit" value="Add">
-  </form>
-</body>
-
-</html>
+{% block content %}
+<h1>Welcome to the Flask MVC template</h1>
+<div>
+    <p>You can put stuff in here.</p>
+</div>
+{% endblock %}
