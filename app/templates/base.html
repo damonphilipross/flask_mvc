@@ -1,17 +1,12 @@
-<html>
-
-<head>
-    <title>Flask MVC</title>
-</head>
-
-<body>
-    <div>
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('login') }}">Login</a>
-    </div>
-
-    <hr>
-    {% block content %}{% endblock %}
-</body>
-
-</html>
+<title>This is a title</title>
+    <link rel="stylesheet" href="{{url_for('.static', filename='stylesheets/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static', filename='/css/nav.css')}}">
+{% block navbar %}
+    {% include 'nav.html' %}
+{% endblock %}
+{% block content %}
+<div class="container">
+    {# application content needs to be provided in the app_content block #}
+    {% block app_content %}{% endblock %}
+</div>
+{% endblock %}
